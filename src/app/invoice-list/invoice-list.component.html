@@ -1,22 +1,18 @@
 <div class="clr-row">
-    <button class="btn btn-primary">Add Invoice</button>
+    <button class="btn btn-primary" (click)="addInvoice()">Add Invoice</button>
 </div>
 
 
 <div class="clr-row">
-    <div class="clr-col-3">
-        <div class="clr-row">
-<div class="clr-col">
-
-    <app-invoice></app-invoice>
-</div>
-
-
-        </div>
     
+    <div class="clr-col-3">
+        <div class="clr-row" *ngFor="let i of invoices">
+            <app-invoice [invoice]="i"></app-invoice>
+        </div>
     </div>
+
     <div class="clr-col-9">
-        <app-invoice-detail></app-invoice-detail>
+        <app-invoice-detail ></app-invoice-detail>
     </div>
 </div>
 

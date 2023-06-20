@@ -1,15 +1,19 @@
 
 <div class="card">
-    <h3 class="card-header">{{invoiceNumber}}</h3>
+    <h3 class="card-header">{{"#"+singleInvoice.ID}}</h3>
     <div class="card-block">
-        <h4 class="card-title">{{customerName}}</h4>
+        <h4 class="card-title"></h4>
         <div class="card-text">
-            {{carMake}}
-            {{carModel}}
+            <p>
+               CustomerID {{singleInvoice.CustomerID}}
+            </p>
+            <p>
+                TechID {{singleInvoice.TechID}}
+            </p>
         </div>
     </div>
     <div class="card-footer">
-        <button class="btn btn-sm">Paid</button>
-        <button class="btn btn-sm">Inspect</button>
+        <button class="btn btn-sm" (click)="paidInvoice()">Paid</button>
+        <button class="btn btn-sm" (click)="InspectInvoice()">Inspect</button>
     </div>
 </div>
